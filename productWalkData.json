@@ -1,0 +1,1501 @@
+{
+  "FDCHAPT1" : {
+    "id" : "FDCHAPT1",
+    "title" : "Frontdesk Operations",
+    "init_milestone_id" : "ALERT_EMAIL",
+    "init_intro_milestone_id" : "INTRO",
+    "module" : "frontdesk",
+    "milestoneList" : {
+      "INTRO" : {
+        "id" : "INTRO",
+        "vedio" : [
+          {
+            "url" : "https://www.youtube.com/embed/96otZ_-g800?autoplay=1&yt:crop=16:9",
+            "style" : {
+              "height" : {
+                "type" : "viewp",
+                "val" : ".9"
+              },
+              "width" : {
+                "type" : "ratio",
+                "val" : "16/9"
+              }
+            }
+          }
+        ],
+        "difficulty" : "easy",
+        "currentStep" : 10,
+        "skipMilestoneInterceptor" : true,
+        "switchIf" : [
+          {
+            "switchToMilestone" : "QUICK_RSV"
+          }
+        ]
+      },
+      "QUICK_RSV" : {
+        "letsStart" : true,
+        "id" : "QUICK_RSV",
+        "vedio" : [
+          {
+            "type" : "stream",
+            "url" : "/QUICK_RSV.mp4",
+            "style" : {
+              "height" : {
+                "type" : "viewp",
+                "val" : "1"
+              },
+              "width" : {
+                "type" : "ratio",
+                "val" : "16/9"
+              }
+            }
+          }
+        ],
+        "difficulty" : "easy",
+        "total_step" : 10,
+        "points" : 10,
+        "switchIf" : [
+          {
+            "switchToMilestone" : "ASSIGN_ROOM"
+          }
+        ]
+      },
+      "ALERT_EMAIL" : {
+        "id" : "ALERT_EMAIL",
+        "skipMilestoneInterceptor" : true,
+        "vedio" : [],
+        "switchIf" : [
+          {
+            "switchToMilestone" : "INTRO"
+          }
+        ]
+      },
+      "ASSIGN_ROOM" : {
+        "id" : "ASSIGN_ROOM",
+        "vedio" : [
+          {
+            "type" : "stream",
+            "url" : "/ASSIGN_ROOM.mp4",
+            "style" : {
+              "height" : {
+                "type" : "viewp",
+                "val" : ".9"
+              },
+              "width" : {
+                "type" : "ratio",
+                "val" : "16/9"
+              }
+            }
+          }
+        ],
+        "difficulty" : "easy",
+        "total_step" : 10,
+        "points" : 2,
+        "switchIf" : [
+          {
+            "switchToMilestone" : "CHECKIN_RSV"
+          }
+        ]
+      },
+      "CHECKIN_RSV" : {
+        "id" : "CHECKIN_RSV",
+        "vedio" : [
+          {
+            "type" : "stream",
+            "url" : "/CHECKIN_RSV.mp4",
+            "style" : {
+              "height" : {
+                "type" : "viewp",
+                "val" : ".9"
+              },
+              "width" : {
+                "type" : "ratio",
+                "val" : "16/9"
+              }
+            }
+          }
+        ],
+        "difficulty" : "easy",
+        "total_step" : 10,
+        "points" : 3,
+        "switchIf" : [
+          {
+            "switchToMilestone" : "CHANGE_ROOM"
+          }
+        ]
+      },
+      "CHANGE_ROOM" : {
+        "id" : "CHANGE_ROOM",
+        "vedio" : [
+          {
+            "type" : "stream",
+            "url" : "/CHANGE_ROOM.m4v",
+            "style" : {
+              "height" : {
+                "type" : "viewp",
+                "val" : ".9"
+              },
+              "width" : {
+                "type" : "ratio",
+                "val" : "16/9"
+              }
+            }
+          }
+        ],
+        "difficulty" : "easy",
+        "total_step" : 10,
+        "points" : 7,
+        "switchIf" : [
+          {
+            "switchToMilestone" : "PERSONALIZE_GUEST"
+          }
+        ]
+      },
+      "PERSONALIZE_GUEST" : {
+        "id" : "PERSONALIZE_GUEST",
+        "vedio" : [
+          {
+            "type" : "stream",
+            "url" : "/PERSONALIZE_GUEST.mp4",
+            "style" : {
+              "height" : {
+                "type" : "viewp",
+                "val" : ".9"
+              },
+              "width" : {
+                "type" : "ratio",
+                "val" : "16/9"
+              }
+            }
+          }
+        ],
+        "difficulty" : "easy",
+        "total_step" : 10,
+        "points" : 5,
+        "switchIf" : [
+          {
+            "switchToMilestone" : "MARK_NOSHOW"
+          }
+        ]
+      },
+      "MARK_NOSHOW" : {
+        "id" : "MARK_NOSHOW",
+        "vedio" : [
+          {
+            "type" : "stream",
+            "url" : "/MARK_NOSHOW.mp4",
+            "style" : {
+              "height" : {
+                "type" : "viewp",
+                "val" : ".9"
+              },
+              "width" : {
+                "type" : "ratio",
+                "val" : "16/9"
+              }
+            }
+          }
+        ],
+        "difficulty" : "easy",
+        "total_step" : 10,
+        "points" : 5,
+        "switchIf" : [
+          {
+            "switchToMilestone" : "CANCEL_RSV"
+          }
+        ]
+      },
+      "CANCEL_RSV" : {
+        "id" : "CANCEL_RSV",
+        "vedio" : [
+          {
+            "type" : "stream",
+            "url" : "/CANCEL_RSV.mp4",
+            "style" : {
+              "height" : {
+                "type" : "viewp",
+                "val" : ".9"
+              },
+              "width" : {
+                "type" : "ratio",
+                "val" : "16/9"
+              }
+            }
+          }
+        ],
+        "difficulty" : "easy",
+        "total_step" : 10,
+        "points" : 5,
+        "switchIf" : [
+          {
+            "switchToMilestone" : "CANCELCHECKIN_REV"
+          }
+        ]
+      },
+      "CANCELCHECKIN_REV" : {
+        "id" : "CANCELCHECKIN_REV",
+        "vedio" : [
+          {
+            "type" : "stream",
+            "url" : "/CANCELCHECKIN_REV.mp4",
+            "style" : {
+              "height" : {
+                "type" : "viewp",
+                "val" : ".9"
+              },
+              "width" : {
+                "type" : "ratio",
+                "val" : "16/9"
+              }
+            }
+          }
+        ],
+        "difficulty" : "easy",
+        "total_step" : 10,
+        "points" : 3,
+        "switchIf" : [
+          {
+            "switchToMilestone" : "CHANGE_DURATION_RSV"
+          }
+        ]
+      },
+      "CHANGE_DURATION_RSV" : {
+        "id" : "CHANGE_DURATION_RSV",
+        "vedio" : [
+          {
+            "type" : "stream",
+            "url" : "/CHANGE_DURATION_RSV.mp4",
+            "style" : {
+              "height" : {
+                "type" : "viewp",
+                "val" : ".9"
+              },
+              "width" : {
+                "type" : "ratio",
+                "val" : "16/9"
+              }
+            }
+          }
+        ],
+        "difficulty" : "easy",
+        "total_step" : 10,
+        "points" : 4,
+        "switchIf" : [
+          {
+            "switchToMilestone" : "ADD_GUEST_ID"
+          }
+        ]
+      },
+      "ADD_GUEST_ID" : {
+        "id" : "ADD_GUEST_ID",
+        "vedio" : [
+          {
+            "type" : "stream",
+            "url" : "/ADD_GUEST_ID.mp4",
+            "style" : {
+              "height" : {
+                "type" : "viewp",
+                "val" : ".9"
+              },
+              "width" : {
+                "type" : "ratio",
+                "val" : "16/9"
+              }
+            }
+          }
+        ],
+        "difficulty" : "easy",
+        "total_step" : 10,
+        "points" : 6,
+        "switchIf" : [
+          {
+            "switchToMilestone" : "MANAGE_MULTIPLE_GUESTS"
+          }
+        ]
+      },
+      "MANAGE_MULTIPLE_GUESTS" : {
+        "id" : "MANAGE_MULTIPLE_GUESTS",
+        "vedio" : [
+          {
+            "type" : "stream",
+            "url" : "/MANAGE_MULTIPLE_GUESTS.mp4",
+            "style" : {
+              "height" : {
+                "type" : "viewp",
+                "val" : ".9"
+              },
+              "width" : {
+                "type" : "ratio",
+                "val" : "16/9"
+              }
+            }
+          }
+        ],
+        "difficulty" : "easy",
+        "total_step" : 10,
+        "points" : 5,
+        "switchIf" : [
+          {
+            "switchToMilestone" : "MANAGE_EXTRA_BEDS"
+          }
+        ]
+      },
+      "MANAGE_EXTRA_BEDS" : {
+        "id" : "MANAGE_EXTRA_BEDS",
+        "vedio" : [
+          {
+            "type" : "stream",
+            "url" : "/MANAGE_EXTRA_BEDS.mp4",
+            "style" : {
+              "height" : {
+                "type" : "viewp",
+                "val" : ".9"
+              },
+              "width" : {
+                "type" : "ratio",
+                "val" : "16/9"
+              }
+            }
+          }
+        ],
+        "difficulty" : "easy",
+        "total_step" : 10,
+        "points" : 3,
+        "switchIf" : [
+          {
+            "switchToMilestone" : "GIVE_ALLOWANCE"
+          }
+        ]
+      },
+      "GIVE_ALLOWANCE" : {
+        "id" : "GIVE_ALLOWANCE",
+        "vedio" : [
+          {
+            "type" : "stream",
+            "url" : "/GIVE_ALLOWANCE.mp4",
+            "style" : {
+              "height" : {
+                "type" : "viewp",
+                "val" : ".9"
+              },
+              "width" : {
+                "type" : "ratio",
+                "val" : "16/9"
+              }
+            }
+          }
+        ],
+        "difficulty" : "easy",
+        "total_step" : 10,
+        "points" : 5,
+        "switchIf" : [
+          {
+            "switchToMilestone" : "GEN_INVOICE"
+          }
+        ]
+      },
+      "GEN_INVOICE" : {
+        "id" : "GEN_INVOICE",
+        "vedio" : [
+          {
+            "type" : "stream",
+            "url" : "/GEN_INVOICE.mp4",
+            "style" : {
+              "height" : {
+                "type" : "viewp",
+                "val" : ".9"
+              },
+              "width" : {
+                "type" : "ratio",
+                "val" : "16/9"
+              }
+            }
+          }
+        ],
+        "difficulty" : "easy",
+        "total_step" : 10,
+        "points" : 6,
+        "switchIf" : [
+          {
+            "switchToMilestone" : "CHECKOUT_RSV"
+          }
+        ]
+      },
+      "CHECKOUT_RSV" : {
+        "id" : "CHECKOUT_RSV",
+        "vedio" : [
+          {
+            "type" : "stream",
+            "url" : "/CHECKOUT_RSV.mp4",
+            "style" : {
+              "height" : {
+                "type" : "viewp",
+                "val" : ".9"
+              },
+              "width" : {
+                "type" : "ratio",
+                "val" : "16/9"
+              }
+            }
+          }
+        ],
+        "difficulty" : "easy",
+        "currentStep" : 10,
+        "points" : 5,
+        "switchIf" : [
+          {
+            "switchToMilestone" : "GROUP_RSV"
+          }
+        ]
+      },
+      "GROUP_RSV" : {
+        "id" : "GROUP_RSV",
+        "vedio" : [
+          {
+            "type" : "stream",
+            "url" : "/GROUP_RSV.mp4",
+            "style" : {
+              "height" : {
+                "type" : "viewp",
+                "val" : ".9"
+              },
+              "width" : {
+                "type" : "ratio",
+                "val" : "16/9"
+              }
+            }
+          }
+        ],
+        "difficulty" : "easy",
+        "total_step" : 10,
+        "points" : 2,
+        "switchIf" : [
+          {
+            "switchToMilestone" : "ADD_ROOM_GRSV"
+          }
+        ]
+      },
+      "ADD_ROOM_GRSV" : {
+        "id" : "ADD_ROOM_GRSV",
+        "vedio" : [
+          {
+            "type" : "stream",
+            "url" : "/ADD_ROOM_GRSV.mp4",
+            "style" : {
+              "height" : {
+                "type" : "viewp",
+                "val" : ".9"
+              },
+              "width" : {
+                "type" : "ratio",
+                "val" : "16/9"
+              }
+            }
+          }
+        ],
+        "difficulty" : "easy",
+        "total_step" : 10,
+        "points" : 5,
+        "switchIf" : [
+          {
+            "switchToMilestone" : "ADD_TD_TASK"
+          }
+        ]
+      },
+      "ADD_TD_TASK" : {
+        "id" : "ADD_TD_TASK",
+        "vedio" : [
+          {
+            "type" : "stream",
+            "url" : "/ADD_TD_TASK.mp4",
+            "style" : {
+              "height" : {
+                "type" : "viewp",
+                "val" : ".9"
+              },
+              "width" : {
+                "type" : "ratio",
+                "val" : "16/9"
+              }
+            }
+          }
+        ],
+        "difficulty" : "easy",
+        "total_step" : 10,
+        "points" : 6,
+        "switchIf" : [
+          {
+            "switchToMilestone" : "TAKE_GUEST_MSG"
+          }
+        ]
+      },
+      "TAKE_GUEST_MSG" : {
+        "id" : "TAKE_GUEST_MSG",
+        "vedio" : [
+          {
+            "type" : "stream",
+            "url" : "/TAKE_GUEST_MSG.mp4",
+            "style" : {
+              "height" : {
+                "type" : "viewp",
+                "val" : ".9"
+              },
+              "width" : {
+                "type" : "ratio",
+                "val" : "16/9"
+              }
+            }
+          }
+        ],
+        "difficulty" : "easy",
+        "total_step" : 10,
+        "points" : 6,
+        "switchIf" : [
+          {
+            "switchToMilestone" : "CHECKOUTGROUP_REV"
+          }
+        ]
+      },
+      "CHECKOUTGROUP_REV" : {
+        "id" : "CHECKOUTGROUP_REV",
+        "vedio" : [
+          {
+            "type" : "stream",
+            "url" : "/CHECKOUTGROUP_REV.mp4",
+            "style" : {
+              "height" : {
+                "type" : "viewp",
+                "val" : ".9"
+              },
+              "width" : {
+                "type" : "ratio",
+                "val" : "16/9"
+              }
+            }
+          }
+        ],
+        "difficulty" : "easy",
+        "total_step" : 10,
+        "points" : 7,
+        "switchIf" : [
+          {
+            "switchToMilestone" : "ADD_NOTES_PREFS"
+          }
+        ]
+      },
+      "ADD_NOTES_PREFS" : {
+        "id" : "ADD_NOTES_PREFS",
+        "vedio" : [
+          {
+            "type" : "stream",
+            "url" : "/ADD_NOTES_PREFS.mp4",
+            "style" : {
+              "height" : {
+                "type" : "viewp",
+                "val" : ".9"
+              },
+              "width" : {
+                "type" : "ratio",
+                "val" : "16/9"
+              }
+            }
+          }
+        ],
+        "difficulty" : "easy",
+        "total_step" : 10,
+        "points" : 3,
+        "switchIf" : [
+          {
+            "switchToMilestone" : "ENTER_CC_INFO"
+          }
+        ]
+      },
+      "ENTER_CC_INFO" : {
+        "id" : "ENTER_CC_INFO",
+        "vedio" : [
+          {
+            "type" : "stream",
+            "url" : "/ENTER_CC_INFO.mp4",
+            "style" : {
+              "height" : {
+                "type" : "viewp",
+                "val" : ".9"
+              },
+              "width" : {
+                "type" : "ratio",
+                "val" : "16/9"
+              }
+            }
+          }
+        ],
+        "difficulty" : "easy",
+        "total_step" : 10,
+        "points" : 5,
+        "switchIf" : [
+          {
+            "switchToMilestone" : "SPLITROOMCHARGE_REV"
+          }
+        ]
+      },
+      "SPLITROOMCHARGE_REV" : {
+        "id" : "SPLITROOMCHARGE_REV",
+        "vedio" : [
+          {
+            "type" : "stream",
+            "url" : "/SPLITROOMCHARGE_REV.mp4",
+            "style" : {
+              "height" : {
+                "type" : "viewp",
+                "val" : ".9"
+              },
+              "width" : {
+                "type" : "ratio",
+                "val" : "16/9"
+              }
+            }
+          }
+        ],
+        "difficulty" : "easy",
+        "total_step" : 10,
+        "points" : 4,
+        "switchIf" : [
+          {
+            "switchToMilestone" : "MAKEDAYUSE_REV"
+          }
+        ]
+      },
+      "MAKEDAYUSE_REV" : {
+        "id" : "MAKEDAYUSE_REV",
+        "vedio" : [
+          {
+            "type" : "stream",
+            "url" : "/MAKEDAYUSE_REV.mp4",
+            "style" : {
+              "height" : {
+                "type" : "viewp",
+                "val" : ".9"
+              },
+              "width" : {
+                "type" : "ratio",
+                "val" : "16/9"
+              }
+            }
+          }
+        ],
+        "difficulty" : "easy",
+        "total_step" : 10,
+        "points" : 10,
+        "switchIf" : [
+          {
+            "switchToMilestone" : "MANAGETASKS_RSV"
+          }
+        ]
+      },
+      "MANAGETASKS_RSV" : {
+        "id" : "MANAGETASKS_RSV",
+        "vedio" : [
+          {
+            "type" : "stream",
+            "url" : "/MANAGETASKS_RSV.mp4",
+            "style" : {
+              "height" : {
+                "type" : "viewp",
+                "val" : ".9"
+              },
+              "width" : {
+                "type" : "ratio",
+                "val" : "16/9"
+              }
+            }
+          }
+        ],
+        "difficulty" : "easy",
+        "total_step" : 10,
+        "points" : 5,
+        "switchIf" : [
+          {
+            "switchToMilestone" : "CURRCONV_PAY"
+          }
+        ]
+      },
+      "CURRCONV_PAY" : {
+        "id" : "CURRCONV_PAY",
+        "vedio" : [
+          {
+            "type" : "stream",
+            "url" : "/CURRCONV_PAY.mp4",
+            "style" : {
+              "height" : {
+                "type" : "viewp",
+                "val" : ".9"
+              },
+              "width" : {
+                "type" : "ratio",
+                "val" : "16/9"
+              }
+            }
+          }
+        ],
+        "difficulty" : "easy",
+        "total_step" : 10,
+        "points" : 7,
+        "switchIf" : [
+          {
+            "switchToMilestone" : "CHANGE_RATE"
+          }
+        ]
+      },
+      "CHANGE_RATE" : {
+        "id" : "CHANGE_RATE",
+        "vedio" : [
+          {
+            "type" : "stream",
+            "url" : "/CHANGE_RATE.mp4",
+            "style" : {
+              "height" : {
+                "type" : "viewp",
+                "val" : ".9"
+              },
+              "width" : {
+                "type" : "ratio",
+                "val" : "16/9"
+              }
+            }
+          }
+        ],
+        "difficulty" : "easy",
+        "total_step" : 10,
+        "points" : 3,
+        "switchIf" : [
+          {
+            "switchToMilestone" : "SPLIT_RSV"
+          }
+        ]
+      },
+      "SPLIT_RSV" : {
+        "id" : "SPLIT_RSV",
+        "vedio" : [
+          {
+            "type" : "stream",
+            "url" : "/SPLIT_RSV.mp4",
+            "style" : {
+              "height" : {
+                "type" : "viewp",
+                "val" : ".9"
+              },
+              "width" : {
+                "type" : "ratio",
+                "val" : "16/9"
+              }
+            }
+          }
+        ],
+        "difficulty" : "easy",
+        "total_step" : 10,
+        "points" : 5,
+        "switchIf" : [
+          {
+            "switchToMilestone" : "SETPAYTERMS_REV"
+          }
+        ]
+      },
+      "SETPAYTERMS_REV" : {
+        "id" : "SETPAYTERMS_REV",
+        "vedio" : [
+          {
+            "type" : "stream",
+            "url" : "/SETPAYTERMS_REV.mp4",
+            "style" : {
+              "height" : {
+                "type" : "viewp",
+                "val" : ".9"
+              },
+              "width" : {
+                "type" : "ratio",
+                "val" : "16/9"
+              }
+            }
+          }
+        ],
+        "difficulty" : "easy",
+        "total_step" : 10,
+        "points" : 2,
+        "switchIf" : [
+          {
+            "switchToMilestone" : "ENTERBOOKING_SOURCE"
+          }
+        ]
+      },
+      "ENTERBOOKING_SOURCE" : {
+        "id" : "ENTERBOOKING_SOURCE",
+        "vedio" : [
+          {
+            "type" : "stream",
+            "url" : "/ENTERBOOKING_SOURCE.mp4",
+            "style" : {
+              "height" : {
+                "type" : "viewp",
+                "val" : ".9"
+              },
+              "width" : {
+                "type" : "ratio",
+                "val" : "16/9"
+              }
+            }
+          }
+        ],
+        "difficulty" : "easy",
+        "total_step" : 10,
+        "points" : 4,
+        "switchIf" : [
+          {
+            "switchToMilestone" : "ADD_SPECIAL_DISCOUNT"
+          }
+        ]
+      },
+      "ADD_SPECIAL_DISCOUNT" : {
+        "id" : "ADD_SPECIAL_DISCOUNT",
+        "vedio" : [
+          {
+            "type" : "stream",
+            "url" : "/ADD_SPECIAL_DISCOUNT.mp4",
+            "style" : {
+              "height" : {
+                "type" : "viewp",
+                "val" : ".9"
+              },
+              "width" : {
+                "type" : "ratio",
+                "val" : "16/9"
+              }
+            }
+          }
+        ],
+        "difficulty" : "easy",
+        "total_step" : 10,
+        "points" : 5,
+        "switchIf" : [
+          {
+            "switchToMilestone" : "EDITGUESTDET_RSV"
+          }
+        ]
+      },
+      "EDITGUESTDET_RSV" : {
+        "id" : "EDITGUESTDET_RSV",
+        "vedio" : [
+          {
+            "type" : "stream",
+            "url" : "/EDITGUESTDET_RSV.mp4",
+            "style" : {
+              "height" : {
+                "type" : "viewp",
+                "val" : ".9"
+              },
+              "width" : {
+                "type" : "ratio",
+                "val" : "16/9"
+              }
+            }
+          }
+        ],
+        "difficulty" : "easy",
+        "total_step" : 10,
+        "points" : 4,
+        "switchIf" : [
+          {
+            "switchToMilestone" : "MARKGUESTVIP"
+          }
+        ]
+      },
+      "MARKGUESTVIP" : {
+        "id" : "MARKGUESTVIP",
+        "vedio" : [
+          {
+            "type" : "stream",
+            "url" : "/MARKGUESTVIP.mp4",
+            "style" : {
+              "height" : {
+                "type" : "viewp",
+                "val" : ".9"
+              },
+              "width" : {
+                "type" : "ratio",
+                "val" : "16/9"
+              }
+            }
+          }
+        ],
+        "difficulty" : "easy",
+        "total_step" : 10,
+        "points" : 2,
+        "switchIf" : [
+          {
+            "switchToMilestone" : "LATE_CHECKOUT"
+          }
+        ]
+      },
+      "LATE_CHECKOUT" : {
+        "id" : "LATE_CHECKOUT",
+        "vedio" : [
+          {
+            "type" : "stream",
+            "url" : "/LATE_CHECKOUT.mp4",
+            "style" : {
+              "height" : {
+                "type" : "viewp",
+                "val" : ".9"
+              },
+              "width" : {
+                "type" : "ratio",
+                "val" : "16/9"
+              }
+            }
+          }
+        ],
+        "difficulty" : "easy",
+        "total_step" : 10,
+        "points" : 4,
+        "switchIf" : [
+          {
+            "switchToMilestone" : "SET_DNR"
+          }
+        ]
+      },
+      "SET_DNR" : {
+        "id" : "SET_DNR",
+        "vedio" : [
+          {
+            "type" : "stream",
+            "url" : "/SET_DNR.mp4",
+            "style" : {
+              "height" : {
+                "type" : "viewp",
+                "val" : ".9"
+              },
+              "width" : {
+                "type" : "ratio",
+                "val" : "16/9"
+              }
+            }
+          }
+        ],
+        "difficulty" : "easy",
+        "total_step" : 10,
+        "points" : 3,
+        "switchIf" : [
+          {
+            "switchToMilestone" : "EARLY_CHECKIN_RSV"
+          }
+        ]
+      },
+      "EARLY_CHECKIN_RSV" : {
+        "id" : "EARLY_CHECKIN_RSV",
+        "vedio" : [
+          {
+            "type" : "stream",
+            "url" : "/EARLY_CHECKIN_RSV.mp4",
+            "style" : {
+              "height" : {
+                "type" : "viewp",
+                "val" : ".9"
+              },
+              "width" : {
+                "type" : "ratio",
+                "val" : "16/9"
+              }
+            }
+          }
+        ],
+        "difficulty" : "easy",
+        "total_step" : 10,
+        "points" : 3,
+        "switchIf" : [
+          {
+            "switchToMilestone" : "IRFFILLHS"
+          }
+        ]
+      },
+      "IRFFILLHS" : {
+        "id" : "IRFFILLHS",
+        "vedio" : [
+          {
+            "type" : "stream",
+            "url" : "/IRFFILLHS.mp4",
+            "style" : {
+              "height" : {
+                "type" : "viewp",
+                "val" : ".9"
+              },
+              "width" : {
+                "type" : "ratio",
+                "val" : "16/9"
+              }
+            }
+          }
+        ],
+        "difficulty" : "easy",
+        "total_step" : 10,
+        "points" : 10,
+        "switchIf" : [
+          {
+            "switchToMilestone" : "IRFFILLRS"
+          }
+        ]
+      },
+      "IRFFILLRS" : {
+        "id" : "IRFFILLRS",
+        "vedio" : [
+          {
+            "type" : "stream",
+            "url" : "/IRFFILLRS.mp4",
+            "style" : {
+              "height" : {
+                "type" : "viewp",
+                "val" : ".9"
+              },
+              "width" : {
+                "type" : "ratio",
+                "val" : "16/9"
+              }
+            }
+          }
+        ],
+        "difficulty" : "easy",
+        "total_step" : 10,
+        "points" : 15,
+        "switchIf" : [
+          {
+            "switchToMilestone" : "IRFFILLDS"
+          }
+        ]
+      },
+      "IRFFILLDS" : {
+        "id" : "IRFFILLDS",
+        "vedio" : [
+          {
+            "type" : "stream",
+            "url" : "/IRFFILLDS.mp4",
+            "style" : {
+              "height" : {
+                "type" : "viewp",
+                "val" : ".9"
+              },
+              "width" : {
+                "type" : "ratio",
+                "val" : "16/9"
+              }
+            }
+          }
+        ],
+        "difficulty" : "easy",
+        "total_step" : 10,
+        "points" : 15
+      },
+      "RESERVATION_DISCOUNT" : {
+        "id" : "RESERVATION_DISCOUNT",
+        "vedio" : [
+          {
+            "type" : "stream",
+            "url" : "/RESERVATION_DISCOUNT.mp4",
+            "style" : {
+              "height" : {
+                "type" : "viewp",
+                "val" : ".9"
+              },
+              "width" : {
+                "type" : "ratio",
+                "val" : "16/9"
+              }
+            }
+          }
+        ],
+        "difficulty" : "easy",
+        "total_step" : 10,
+        "points" : 5,
+        "switchIf" : [
+          {
+            "switchToMilestone" : "TEMP_RSV"
+          }
+        ]
+      },
+      "TEMP_RSV" : {
+        "id" : "TEMP_RSV",
+        "vedio" : [
+          {
+            "type" : "stream",
+            "url" : "/TEMP_RSV.mp4",
+            "style" : {
+              "height" : {
+                "type" : "viewp",
+                "val" : ".9"
+              },
+              "width" : {
+                "type" : "ratio",
+                "val" : "16/9"
+              }
+            }
+          }
+        ],
+        "difficulty" : "easy",
+        "total_step" : 10,
+        "points" : 5,
+        "switchIf" : [
+          {
+            "switchToMilestone" : "TEMP_RSV"
+          }
+        ]
+      },
+      "CONFIRM_TEMP_RSV" : {
+        "id" : "CONFIRM_TEMP_RSV",
+        "vedio" : [
+          {
+            "type" : "stream",
+            "url" : "/CONFIRM_TEMP_RSV.mp4",
+            "style" : {
+              "height" : {
+                "type" : "viewp",
+                "val" : ".9"
+              },
+              "width" : {
+                "type" : "ratio",
+                "val" : "16/9"
+              }
+            }
+          }
+        ],
+        "difficulty" : "easy",
+        "total_step" : 10,
+        "points" : 5,
+        "switchIf" : [
+          {
+            "switchToMilestone" : "SEARCH_TEMP_RSV"
+          }
+        ]
+      },
+      "SEARCH_TEMP_RSV" : {
+        "id" : "SEARCH_TEMP_RSV",
+        "vedio" : [
+          {
+            "type" : "stream",
+            "url" : "/SEARCH_TEMP_RSV.mp4",
+            "style" : {
+              "height" : {
+                "type" : "viewp",
+                "val" : ".9"
+              },
+              "width" : {
+                "type" : "ratio",
+                "val" : "16/9"
+              }
+            }
+          }
+        ],
+        "difficulty" : "easy",
+        "total_step" : 10,
+        "points" : 5,
+        "switchIf" : [
+          {
+            "switchToMilestone" : "QUOT_TEMP_RSV"
+          }
+        ]
+      },
+      "QUOT_TEMP_RSV" : {
+        "id" : "QUOT_TEMP_RSV",
+        "vedio" : [
+          {
+            "type" : "stream",
+            "url" : "/QUOT_TEMP_RSV.mp4",
+            "style" : {
+              "height" : {
+                "type" : "viewp",
+                "val" : ".9"
+              },
+              "width" : {
+                "type" : "ratio",
+                "val" : "16/9"
+              }
+            }
+          }
+        ],
+        "difficulty" : "easy",
+        "total_step" : 10,
+        "points" : 5,
+        "switchIf" : [
+          {
+            "switchToMilestone" : "CHANGE_HTDATE_RSV"
+          }
+        ]
+      },
+      "CHANGE_HTDATE_RSV" : {
+        "id" : "CHANGE_HTDATE_RSV",
+        "vedio" : [
+          {
+            "type" : "stream",
+            "url" : "/CHANGE_HTDATE_RSV.mp4",
+            "style" : {
+              "height" : {
+                "type" : "viewp",
+                "val" : ".9"
+              },
+              "width" : {
+                "type" : "ratio",
+                "val" : "16/9"
+              }
+            }
+          }
+        ],
+        "difficulty" : "easy",
+        "total_step" : 10,
+        "points" : 5,
+        "switchIf" : [
+          {
+            "switchToMilestone" : "CORP_GROUP_RSV"
+          }
+        ]
+      },
+      "CORP_GROUP_RSV" : {
+        "id" : "CORP_GROUP_RSV",
+        "vedio" : [
+          {
+            "type" : "stream",
+            "url" : "/CORP_GROUP_RSV.mp4",
+            "style" : {
+              "height" : {
+                "type" : "viewp",
+                "val" : ".9"
+              },
+              "width" : {
+                "type" : "ratio",
+                "val" : "16/9"
+              }
+            }
+          }
+        ],
+        "difficulty" : "easy",
+        "total_step" : 10,
+        "points" : 5,
+        "switchIf" : [
+          {
+            "switchToMilestone" : "CONFIRM_HT_RSV"
+          }
+        ]
+      },
+      "CONFIRM_HT_RSV" : {
+        "id" : "CONFIRM_HT_RSV",
+        "vedio" : [
+          {
+            "type" : "stream",
+            "url" : "/CONFIRM_HT_RSV.mp4",
+            "style" : {
+              "height" : {
+                "type" : "viewp",
+                "val" : ".9"
+              },
+              "width" : {
+                "type" : "ratio",
+                "val" : "16/9"
+              }
+            }
+          }
+        ],
+        "difficulty" : "easy",
+        "total_step" : 10,
+        "points" : 5,
+        "switchIf" : [
+          {
+            "switchToMilestone" : "CHANGE_HK_STATUS"
+          }
+        ]
+      },
+      "CHANGE_HK_STATUS" : {
+        "id" : "CHANGE_HK_STATUS",
+        "vedio" : [
+          {
+            "type" : "stream",
+            "url" : "/CHANGE_HK_STATUS.mp4",
+            "style" : {
+              "height" : {
+                "type" : "viewp",
+                "val" : ".9"
+              },
+              "width" : {
+                "type" : "ratio",
+                "val" : "16/9"
+              }
+            }
+          }
+        ],
+        "difficulty" : "easy",
+        "total_step" : 10,
+        "points" : 5,
+        "switchIf" : [
+          {
+            "switchToMilestone" : "HOUSEUSE_RSV"
+          }
+        ]
+      },
+      "HOUSEUSE_RSV" : {
+        "id" : "HOUSEUSE_RSV",
+        "vedio" : [
+          {
+            "type" : "stream",
+            "url" : "/HOUSEUSE_RSV.mp4",
+            "style" : {
+              "height" : {
+                "type" : "viewp",
+                "val" : ".9"
+              },
+              "width" : {
+                "type" : "ratio",
+                "val" : "16/9"
+              }
+            }
+          }
+        ],
+        "difficulty" : "easy",
+        "total_step" : 10,
+        "points" : 5,
+        "switchIf" : [
+          {
+            "switchToMilestone" : "AGENT_GROUP_RSV"
+          }
+        ]
+      },
+      "AGENT_GROUP_RSV" : {
+        "id" : "AGENT_GROUP_RSV",
+        "vedio" : [
+          {
+            "type" : "stream",
+            "url" : "/AGENT_GROUP_RSV.mp4",
+            "style" : {
+              "height" : {
+                "type" : "viewp",
+                "val" : ".9"
+              },
+              "width" : {
+                "type" : "ratio",
+                "val" : "16/9"
+              }
+            }
+          }
+        ],
+        "difficulty" : "easy",
+        "total_step" : 10,
+        "points" : 5,
+        "switchIf" : [
+          {
+            "switchToMilestone" : "ADD_INFANTS_RSV"
+          }
+        ]
+      },
+      "ADD_INFANTS_RSV" : {
+        "id" : "ADD_INFANTS_RSV",
+        "vedio" : [
+          {
+            "type" : "stream",
+            "url" : "/ADD_INFANTS_RSV.mp4",
+            "style" : {
+              "height" : {
+                "type" : "viewp",
+                "val" : ".9"
+              },
+              "width" : {
+                "type" : "ratio",
+                "val" : "16/9"
+              }
+            }
+          }
+        ],
+        "difficulty" : "easy",
+        "total_step" : 10,
+        "points" : 5,
+        "switchIf" : [
+          {
+            "switchToMilestone" : "ADD_PROMO_CODE_RSV"
+          }
+        ]
+      },
+      "ADD_PROMO_CODE_RSV" : {
+        "id" : "ADD_PROMO_CODE_RSV",
+        "vedio" : [
+          {
+            "type" : "stream",
+            "url" : "/ADD_PROMO_CODE_RSV.mp4",
+            "style" : {
+              "height" : {
+                "type" : "viewp",
+                "val" : ".9"
+              },
+              "width" : {
+                "type" : "ratio",
+                "val" : "16/9"
+              }
+            }
+          }
+        ],
+        "difficulty" : "easy",
+        "total_step" : 10,
+        "points" : 5,
+        "switchIf" : [
+          {
+            "switchToMilestone" : "MANAGE_OCC_GRSV"
+          }
+        ]
+      },
+      "MANAGE_OCC_GRSV" : {
+        "id" : "MANAGE_OCC_GRSV",
+        "vedio" : [
+          {
+            "type" : "stream",
+            "url" : "/MANAGE_OCC_GR.mp4",
+            "style" : {
+              "height" : {
+                "type" : "viewp",
+                "val" : ".9"
+              },
+              "width" : {
+                "type" : "ratio",
+                "val" : "16/9"
+              }
+            }
+          }
+        ],
+        "difficulty" : "easy",
+        "total_step" : 10,
+        "points" : 5,
+        "switchIf" : [
+          {
+            "switchToMilestone" : "EXTEND_SPLIT_RSV"
+          }
+        ]
+      },
+      "EXTEND_SPLIT_RSV" : {
+        "id" : "EXTEND_SPLIT_RSV",
+        "vedio" : [
+          {
+            "type" : "stream",
+            "url" : "/EXTEND_SPLIT_RSV.mp4",
+            "style" : {
+              "height" : {
+                "type" : "viewp",
+                "val" : ".9"
+              },
+              "width" : {
+                "type" : "ratio",
+                "val" : "16/9"
+              }
+            }
+          }
+        ],
+        "difficulty" : "easy",
+        "total_step" : 10,
+        "points" : 5,
+        "switchIf" : [
+          {
+            "switchToMilestone" : "MANAGE_OCC_GRSV"
+          }
+        ]
+      }
+    }
+  }
+}

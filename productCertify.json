@@ -1,0 +1,42 @@
+{
+  "TASK1" : {
+        "title":"task 1 title",
+        "timer" : "100",
+        "milestoneList":{
+               "QUICK_RSV":{
+                   "shortTitle" : "Create Reservation",
+                   "title" : "Create Reservation"
+               },
+               "ASSIGN_ROOM":{
+                   "shortTitle" : "Assign Room",
+                   "title" : "Assign Room"
+               }
+           },
+       "next":"TASK2"
+  },
+  "TASK2" : {
+        "title":"task 2 title",
+        "timer" : "100",
+        "milestoneList":{
+               "CHECKIN_RSV":{
+                   "shortTitle" : "Checkin Reservation",
+                   "title" : "Checkin Reservation"
+               },
+               "CANCELCHECKIN_REV":{
+                   "shortTitle" : "Cancel Checkin Reservation",
+                   "title" : "Cancel Checkin Reservation"
+               }
+           },
+            "next":"TASK3"
+  },
+   "TASK3" : {
+        "timer" : "100",
+        "title":"task 3 title",
+        "milestoneList":{
+               "MILEID":{
+                   "shortTitle" : "create Reservation333",
+                   "title" : "create Reservation with 444 adult 1 child"
+               }
+           }
+  }
+}

@@ -1,0 +1,784 @@
+{   
+    "RSV1001": {
+        "id": "RSV1001",
+        "title": "Right Click on the reservation due for Check Out",
+        "type": "event",
+        "highlighter": {
+            "selector": {
+                "self": "#bookingOwner"
+            }
+        },
+        "guideMarkers": [
+            {
+                "selector": {
+                    "self": "[groupstatus=''].prv.checkedInRoom"
+                },
+                "title": [
+                    "Right Click this reservation"
+                ],
+                "class": "right"
+            }
+        ],
+        "cancelIf": [
+            {
+                "type": "event",
+                "eventType": "click",
+                "selector": {
+                    "self": "#leftOvrl,#topOvrl,#rgtOvrl,#botOvrl,.tdc"
+                }
+            },
+            {
+                "type": "event",
+                "eventType": "contextmenu",
+                "selector": {
+                    "self": ".reservationRoom,.checkedOutRoom,#bookingOwner,.tdc:not([groupstatus=''])"
+                }
+            }
+        ],
+        "startIf": [
+            {
+                "type": "event",
+                "eventType": "contextmenu",
+                "selector": {
+                    "self": ".checkedInRoom:not([groupstatus='RESERVE'])"
+                },
+                "highlighter": {
+                    "selector": {
+                        "self": "#contextmenu"
+                    }
+                }
+            }
+        ],
+        "switchIf": [
+            {
+                "switchToActivity": "RSV1002"
+            }
+        ]
+    },
+    "RSV1002": {
+        "id": "RSV1002",
+        "title": "Click Check Out",
+        "type": "event",
+        "highlighter": {
+            "selector": {
+                "self": "#contextmenu"
+            }
+        },
+        "guideMarkers": [
+            {
+                "selector": {
+                    "self": "#context_checkout_s"
+                },
+                "title": [
+                    "Click Check Out"
+                ],
+                "class": "right",
+                "autoFocus": false
+            }
+        ],
+        "cancelIf": [
+            {
+                "type": "event",
+                "eventType": "click",
+                "selector": {
+                    "self": "#leftOvrl,#topOvrl,#rgtOvrl,#botOvrl,.dark-overlay,#context_uncheckin_s,#context_checkin_s,#context_uncheckout_s,#context_assign,#context_unassign,#context_payment,#context_split,#context_viewdetails,#context_groupdetails,#context_checkin_g,#context_checkout_g,#context_move,#context_move_special,#context_task_n_msg,#context_change_room"
+                }
+            }
+        ],
+        "startIf": [
+            {
+                "type": "event",
+                "eventType": "click",
+                "selector": {
+                    "self": "#context_checkout_s"
+                },
+                "highlighter": {}
+            }
+        ],
+        "completeIf": [
+            {
+                "type": "mutation",
+                "selector": {
+                    "self": "div#PaymentDetailGrp, div#PaymentDetail"
+                }
+            }
+        ],
+        "switchIf": [
+            {
+                "switchToActivity": "RSV1006"
+            }
+        ]
+    },
+    "RSV1006": {
+        "id": "RSV1006",
+        "title": "Click Check Out Reservation",
+        "type": "event",
+        "highlighter": {
+            "selector": {
+                "self": "div#PaymentDetailGrp, div#PaymentDetail"
+            },
+            "hideBottom": true
+        },
+        "disabler": [
+            {
+                "selector": {
+                    "self": "[name=btnQuickPaymentsCheckOut]"
+                }
+            }
+        ],
+        "guideMarkers": [
+            {
+                "selector": {
+                    "self": "#btnGenarateFolio"
+                },
+                "title": [
+                    "Click Generate Folio"
+                ],
+                "class": "bottom"
+            }
+        ],
+        "cancelIf": [
+            {
+                "type": "event",
+                "eventType": "click",
+                "selector": {
+                    "self": "[name=btnPaymentsCheckOut],#btnGrpChkOut,#leftOvrl,#topOvrl,#rgtOvrl,#botOvrl,[value=Back],#BtnPaymentsClose,.closebtn"
+                }
+            }
+        ],
+        "startIf": [
+            {
+                "type": "event",
+                "eventType": "click",
+                "selector": {
+                    "self": "#btnGenarateFolio"
+                }
+            }
+        ],
+        "switchIf": [
+            {
+                "switchToActivity": "RSV1007"
+            }
+        ]
+    },
+    "RSV1007": {
+        "id": "RSV1007",
+        "title": "Click Check Out Reservation",
+        "type": "event",
+        "highlighter": {
+            "selector": {
+                "self": "div#PaymentDetailGrp, div#PaymentDetail"
+            },
+            "hideBottom": true
+        },
+        "disabler": [
+            {
+                "selector": {
+                    "self": "[name=btnQuickPaymentsCheckOut]"
+                }
+            }
+        ],
+        "guideMarkers": [
+            {
+                "selector": {
+                    "self": "#payTypesMode"
+                },
+                "title": [
+                    "Select Cash as Payment Mode"
+                ],
+                "class": "bottom"
+            },
+            {
+                "selector": {
+                    "self": "#payTypes"
+                },
+                "title": [
+                    "Select Payment Type"
+                ],
+                "class": "top",
+                "autoFocus": false
+            },
+            {
+                "selector": {
+                    "self": "#btnPaymentPayNow"
+                },
+                "title": [
+                    "Click Pay Now to collect Payment"
+                ],
+                "class": "left",
+                "autoFocus": false
+            }
+        ],
+        "cancelIf": [
+            {
+                "type": "event",
+                "eventType": "click",
+                "selector": {
+                    "self": "[name=btnPaymentsCheckOut],#btnGrpChkOut,#leftOvrl,#topOvrl,#rgtOvrl,#botOvrl,[value=Back],#BtnPaymentsClose,.closebtn"
+                }
+            }
+        ],
+        "startIf": [
+            {
+                "type": "event",
+                "eventType": "click",
+                "selector": {
+                    "self": "#btnPaymentPayNow"
+                }
+            }
+        ],
+        "switchIf": [
+            {
+                "switchToActivity": "RSV1008"
+            }
+        ]
+    },
+    "RSV_VIEW_DETAILS001": {
+        "id": "RSV_VIEW_DETAILS001",
+        "title" : "open Reservation tab",
+          "type" : "event",
+          "highlighter" : {
+            "selector" : {
+              "self" : "#contextmenu"
+            }
+          },
+          "guideMarkers" : [
+            {
+              "selector" : {
+                "self" : "#context_viewdetails"
+              },
+              "title" : [
+                "Click View Details"
+              ],
+              "class" : "right left-click",
+              "autoFocus":false
+            }
+          ],
+          "cancelIf" : [
+            {
+              "type" : "event",
+              "eventType" : "click",
+
+              "selector" : {
+                "self" : "#leftOvrl,#topOvrl,#rgtOvrl,#botOvrl,.dark-overlay,#context_uncheckin_s,#context_checkin_s,#context_uncheckout_s,#context_assign,#context_unassign,#context_payment,#context_split,#context_checkout_s,#context_groupdetails,#context_checkin_g,#context_checkout_g,#context_move,#context_move_special,#context_task_n_msg,#context_change_room"
+              }
+            }
+          ],
+          "startIf" : [
+            {
+              "type" : "event",
+              "eventType" : "click",
+              "selector" : {
+                "self" : "#context_viewdetails"
+              },
+              "highlighter" : {}
+            }
+          ],
+          "completeIf" : [
+            {
+              "type" : "mutation",
+              "selector" : {
+                "self" : "#frmGroupResView, #frmSingleResView"
+              },
+              "highlighter" : {
+                "selector" : {
+                  "self" : "#frmGroupResView, #frmSingleResView"
+                }
+              }
+            }
+          ]
+    },
+    "RSV_ENABLE_EDITING_001": {
+        "id": "RSV_ENABLE_EDITING_001",
+        "title": "Click on Enable-Editing button",
+        "type": "event",
+        "highlighter": {
+            "selector": {
+                "self": "#frmGroupResView,#frmSingleResView"
+            },
+            "hideBottom": true
+        },
+        "guideMarkers": [
+            {
+                "selector": {
+                    "self": "[value*='Enable Editing']"
+                },
+                "title": [
+                    "Click Enable Editing"
+                ],
+                "class": "right  left-click"
+            }
+        ],
+        "cancelIf": [
+            {
+                "type": "event",
+                "eventType": "click",
+                "selector": {
+                    "self": "#leftOvrl,#topOvrl,#rgtOvrl,#botOvrl,[value=Close],[value=Back],[value=Payment]"
+                }
+            }
+        ],
+        "startIf": [
+            {
+                "type": "event",
+                "eventType": "click",
+                "selector": {
+                    "self": "[value*='Enable Editing']"
+                }
+            }
+        ],
+        "completeIf": [
+            {
+                "type": "mutation",
+                "selector": {
+                    "self": "#frmGroupReservation, #frmSingleRes"
+                }
+            }
+        ]
+    },
+    "RSV_CLICKED001" : {
+          "id" : "RSV_CLICKED001",
+         "title" : "Clicked on reservation",
+          "type" : "event",
+          "guideMarkers" : [
+            {
+              "selector" : {
+                "self" : "#btnSrShowEditDetails-button"
+              },
+              "title" : [
+                "Click View"
+              ],
+              "class" : "right left-click",
+              "autoFocus" : false
+            }
+          ],
+          "startIf" : [
+            {
+              "type" : "mutation",
+              "selector" : {
+                "self" : "#btnSrShowEditDetails-button"
+              },
+              "highlighter" : {
+                "selector" : {
+                  "self" : "#panelSingleResShow"
+                }
+              }
+            }
+          ],
+          "hider" : [
+            {
+              "selector" : {
+                "self" : ".container-close"
+              }
+            }
+          ],
+          "disabler" : [
+            {
+              "selector" : {
+                "self" : "#btnSrShowPrint-button,#btnSrShowSendmail-button,#btnSrShowClose-button,.container-close,#btnGrOwnShowSendmail-button"
+              }
+            }
+          ]
+        },
+    "RSV_RIGHT_CLICK001" : {
+          "id" : "RSV_RIGHT_CLICK001",
+          "title" : "Right click this reservation",
+          "type" : "event",
+          "highlighter" : {
+            "selector" : {
+              "self" : "#bookingOwner"
+            }
+          },
+          "guideMarkers" : [
+            {
+              "selector" : {
+                "self" : ".reservationRoom:not([issplit='1']):not([duration='1']), .checkedInRoom:not(.prv):not([issplit='1']):not([duration='1'])"
+              },
+              "title" : [
+                "Right click this reservation"
+              ],
+              "class" : "right right-click"
+            }
+          ],
+          "startIf" : [
+            {
+              "type" : "event",
+              "eventType" : "contextmenu",
+              "selector" : {
+                "self" : ".reservationRoom:not([issplit='1']):not([duration='1']), .checkedInRoom:not(.prv):not([issplit='1']):not([duration='1'])"
+              },
+              "highlighter" : {
+                "selector" : {
+                  "self" : "#contextmenu"
+                }
+              }
+            }
+          ],
+          "cancelIf" : [
+            {
+              "type" : "event",
+              "eventType" : "click",
+              "selector" : {
+                "self" : "#leftOvrl,#topOvrl,#rgtOvrl,#botOvrl,.checkedOutRoom,#bookingOwner,.checkedInRoom.prv,.tdc[issplit='1'],.tdc[duration='1'] "
+              }
+            },
+            {
+              "type" : "event",
+              "eventType" : "contextmenu",
+              "selector" : {
+                "self" : "#leftOvrl,#topOvrl,#rgtOvrl,#botOvrl,.checkedOutRoom,#bookingOwner,.checkedInRoom.prv,.tdc[issplit='1'],.tdc[duration='1'] "
+              }
+            }
+          ]
+        },
+    "RSV_RIGHT_CLICK002" : {
+          "id" : "RSV_RIGHT_CLICK002",
+          "title" : "Right Click this Reservation",
+          "type" : "event",
+          "highlighter" : {
+            "selector" : {
+              "self" : "#bookingOwner"
+            }
+          },
+          "guideMarkers" : [
+            {
+              "selector" : {
+                "self" : "[groupstatus='RESERVE']"
+              },
+              "title" : [
+                "Right click this reservation"
+              ],
+              "class" : "left  right-click"
+            }
+          ],
+          "cancelIf" : [
+            {
+              "type" : "event",
+              "eventType" : "contextmenu",
+              "selector" : {
+                "self" : "#leftOvrl,#topOvrl,#rgtOvrl,#botOvrl,.checkedInRoom,.checkedOutRoom,.fn1:not([groupstatus='RESERVE']).reservationRoom,.fn2:not([groupstatus='RESERVE']).reservationRoom,#bookingOwner"
+              }
+            }
+          ]
+        },
+    "RSV_RIGHT_CLICK003": {
+        "id": "RSV_RIGHT_CLICK003",
+        "title": "Right click this reservation",
+        "type": "event",
+        "highlighter": {
+            "scroll": false,
+            "selector": {
+                "self": "#bookingOwner"
+            }
+        },
+        "guideMarkers": [
+            {
+                "selector": {
+                    "self": ".reservationRoom[groupstatus='']:not([duration='1'])"
+                },
+                "title": [
+                    "Right Click this reservation"
+                ],
+                "class": "left right-click"
+            }
+        ],
+        "cancelIf": [
+            {
+                "type": "event",
+                "eventType": "click",
+                "selector": {
+                    "self": "#leftOvrl,#topOvrl,#rgtOvrl,#botOvrl,.tdc:not(.reservationRoom[groupstatus='']):not([duration='1'])"
+                }
+            },
+            {
+                "type": "event",
+                "eventType": "contextmenu",
+                "selector": {
+                    "self": ".checkedOutRoom,#bookingOwner,.tdc:not(.reservationRoom[groupstatus='']):not([duration='1'])"
+                }
+            }
+        ]
+    },
+        "RSV_CLOSE" : {
+          "id" : "RSV_CLOSE",
+          "title" : "click on Close",
+          "type" : "event",
+          "highlighter" : {
+            "selector" : {
+              "self" : "#frmGroupResView,#frmSingleResView"
+            }
+          },
+          "guideMarkers" : [
+            {
+              "selector" : {
+                "self" : "#btnmainSRClose"
+              },
+              "title" : [
+                "Click Close"
+              ],
+              "class" : "top"
+            }
+          ],
+          "cancelIf" : [
+            {
+              "type" : "event",
+              "eventType" : "click",
+              "selector" : {
+                "self" : "#leftOvrl,#topOvrl,#rgtOvrl,#botOvrl,#btnmainSRPay,[value*='Enable Editing']"
+              }
+            }
+          ],
+          "completeIf" : [
+            {
+              "type" : "event",
+              "eventType" : "click",
+              "selector" : {
+                "self" : "#btnmainSRClose"
+              }
+            }
+          ]
+        },
+        "RSV_TEMP" : {
+        "id" : "RSV_TEMP",
+        "title" : "Click Temporary Reserve",
+        "type" : "event",
+        "highlighter" : {
+          "selector" : {
+            "self" : "#navlinksro :nth-child(4)"
+          }
+        },
+        "guideMarkers" : [
+          {
+            "selector" : {
+              "self" :  "#navlinksro :nth-child(4)"
+            },
+
+            "title" : [
+              "Click Temp Room List"
+            ],
+            "class" : "right"
+          }
+        ],
+        "startIf" : [
+          {
+            "type" : "event",
+            "eventType" : "click",
+            "selector" : {
+              "self" : "#navlinksro :nth-child(4)"
+
+            }
+          }
+        ],
+        "cancelIf" : [
+          {
+            "type" : "event",
+            "eventType" : "click",
+            "selector" : {
+              "self" : "#leftOvrl,#topOvrl,#rgtOvrl,#botOvrl"
+            }
+          }
+        ]
+      },
+        "RSV_TEMP_TO_SAVE": {
+        "id": "RSV_TEMP_TO_SAVE",
+        "title": "Save Reservation.",
+        "type": "event",
+        "highlighter": {
+            "selector": {
+                "self": "#frmGroupReservation, #frmSingleRes"
+            }
+        },
+        "guideMarkers": [
+            {
+                "selector": {
+                    "self": "#btnTempToRsv"
+                },
+
+                "title": [
+                    "Click to Reserve"
+                ],
+                "class": "bottom"
+            }
+        ],
+        "startIf": [
+            {
+                "type": "event",
+                "eventType": "click",
+                "selector": {
+                    "self": "#btnTempToRsv"
+                }
+            }
+        ],
+        "disabler": [
+            {
+                "selector": {
+                    "self": "#btnmainSRClose,[name='btnSngResPayment'],#btnRsvCanceled,#btnRsvSave"
+                }
+            }
+        ],
+        "cancelIf": [
+            {
+                "type": "event",
+                "eventType": "click",
+                "selector": {
+                    "self": "#leftOvrl,#topOvrl,#rgtOvrl,#botOvrl,.closebtn"
+                }
+            }
+        ],
+        "completeIf": [
+           {
+                "type": "mutation",
+                "selector": {
+                    "self": "#bookingOwner"
+                }
+           }
+        ]
+    },
+        "RSV_CREATE": {
+        "id": "RSV_CREATE",
+        "title": "open Reservation tab",
+        "type": "event",
+        "highlighter": {
+            "selector": {
+                "self": "div#PanelQuickRes"
+            },
+            "autoFocus" : true,
+            "pickMyZIndex" : false
+        },
+        "guideMarkers": [
+            {
+                "selector": {
+                    "self": "#PanelQuickRes_c:visible #qrSelRateType"
+                },
+                "hideTitle": true,
+                "title": [
+                    "Click here"
+                ],
+                "class": "bottom  left-click"
+            },
+            {
+                "selector": {
+                    "self": "#PanelQuickRes_c:visible #qrTxtFirstName"
+                },
+                "title": [
+                    "Enter First Name"
+                ],
+                "class": "bottom  left-click"
+            },
+            {
+                "selector": {
+                    "self": "#PanelQuickRes_c:visible #qrTxtLastName"
+                },
+                "title": [
+                    "Enter Last Name"
+                ],
+                "class": "bottom  left-click"
+            },
+            {
+                "selector": {
+                    "self":  "#PanelQuickRes_c:visible #qrTxtPhone"
+                },
+                "title": [
+                    "Enter Phone Number"
+                ],
+                "class": "bottom  left-click"
+            },
+            {
+                "selector": {
+                    "self": "#lnkQResFormSingleEnab"
+                },
+                "title": [
+                    "Click Single"
+                ],
+                "class": "bottom  left-click"
+            }
+        ],
+        "startIf": [
+            {
+                "type": "event",
+                "eventType": "click",
+                "selector": {
+                    "self": "#lnkQResFormSingleEnab,#lnkQResFormSingleDis"
+                },
+                "highlighter": {}
+            }
+        ],
+        "hider": [
+            {
+                "selector": {
+                    "self": ".container-close"
+                }
+            }
+        ],
+        "cancelIf": [
+            {
+                "type": "event",
+                "eventType": "click",
+                "selector": {
+                    "self": "#leftOvrl,#topOvrl,#rgtOvrl,#botOvrl,[type=button],[producttrialsel=CREATE_GROUP],[producttrialsel=CREATE_TA_CORP]"
+                }
+            }
+        ],
+        "completeIf": [
+            {
+                "type": "mutation",
+                "selector": {
+                    "self": "#frmSingleRes"
+                },
+                "highlighter": {
+                    "selector": {
+                        "self": "#frmSingleRes"
+                    }
+                }
+            }
+        ]
+    },
+        "RSV_DRAG_FROM_TO_DATE": {
+        "id": "RSV_DRAG_FROM_TO_DATE",
+        "title": "Click on Check In Date",
+        "type": "event",
+        "highlighter": {
+            "selector": {
+                "self": "#bookingOwner"
+            }
+        },
+        "guideMarkers": [
+            {
+                "selector": {
+                    "self": "#bookingOwner :nth-child(3) :nth-child(10)"
+                },
+                "title": [
+                    "Click and drag the mouse here"
+                ],
+                "class": "left left-click",
+                "extraHtml": [
+                    {
+                        "positionPlus": {
+                            "left": 295,
+                            "top": 10
+                        },
+                        "innerHtml": "<div class='fo-right'></div>"
+                    },
+                    {
+                        "positionPlus": {
+                            "left": 295,
+                            "top": 10
+                        },
+                        "innerHtml": "<div class='fo-cursor'></div>"
+                    }
+                ]
+            }
+        ],
+        "startIf": [
+            {
+                "type": "event",
+                "eventType": "click",
+                "selector": {
+                    "self": "#bookingOwner"
+                }
+            }
+        ]
+    }
+        
+    
+}
