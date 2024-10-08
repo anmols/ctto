@@ -2,8 +2,8 @@
   "FDCHAPT1" : {
     "id" : "FDCHAPT1",
     "title" : "Frontdesk Operations",
-    "init_milestone_id" : "ALERT_EMAIL",
-    "init_intro_milestone_id" : "INTRO",
+    "init_milestone_id" : "CHECKOUT_RSV",
+    "init_intro_milestone_id" : "CHECKOUT_RSV",
     "module" : "frontdesk",
     "milestoneList" : {
       "INTRO" : {

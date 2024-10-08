@@ -6,7 +6,7 @@ var hiderZindex=11999;
 var initCertificationTaskId = "TASK1";
 var utcDateString;
 
-stateInterceptors = {    
+var stateInterceptors_certify = {    
     "certification":{
       
         "beforeNext":[
@@ -534,29 +534,29 @@ let certification = class certification{
 };
 
 
-var pCertificate;
-$(document).ready(function () {
+// var pCertificate;
+// $(document).ready(function () {
     
-    let url = "";
-    let requestProductCertificationData = "productCertify.json?v="+jsUpdateVersion;
-    let requestProductWalkTaskList = "productWalkTaskList.json?v="+jsUpdateVersion;
+//     let url = "";
+//     let requestProductCertificationData = "productCertify.json?v="+jsUpdateVersion;
+//     let requestProductWalkTaskList = "productWalkTaskList.json?v="+jsUpdateVersion;
     
-    var productWalkServer2 = new productWalkServer();
+//     var productWalkServer2 = new productWalkServer();
     
-    productWalkServer2.get(url, requestProductWalkTaskList, {}, function(taskList_FRONTDESK){    
+//     productWalkServer2.get(url, requestProductWalkTaskList, {}, function(taskList_FRONTDESK){    
 
-        productWalkServer2.get(url,requestProductCertificationData,{},function(certificationData){
+//         productWalkServer2.get(url,requestProductCertificationData,{},function(certificationData){
 
-            pCertificate = new certification(certificationData, new domHelper(), stateInterceptors, productWalkServer2, taskList_FRONTDESK);
+//             pCertificate = new certification(certificationData, new domHelper(), stateInterceptors_certify, productWalkServer2, taskList_FRONTDESK);
 
-            pCertificate.load(function()
-            {
-                pCertificate.start(pCertificate.user.certification.currentId);
+//             pCertificate.load(function()
+//             {
+//                 pCertificate.start(pCertificate.user.certification.currentId);
 
-            });
-            console.log(pCertificate);
-        });
+//             });
+//             console.log(pCertificate);
+//         });
 
 
-    });
-});
+//     });
+// });

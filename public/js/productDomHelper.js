@@ -1,20 +1,5 @@
-// extend jquery dialog function
-$.dialog = function(options) {
-    $( "#dialog" ).html(options.content);
-    
-    $( "#dialog" ).dialog({
-        modal: true,
-        open:options.onOpen,
-        beforeClose:options.onClose,
-        buttons: {
-          Ok: function() {
-           
-            $( this ).dialog( "close" );
-            options.onClose();
-          }
-        }
-      });
-};
+
+var MD5 = function(d){var r = M(V(Y(X(d),8*d.length)));return r.toLowerCase()};function M(d){for(var _,m="0123456789ABCDEF",f="",r=0;r<d.length;r++)_=d.charCodeAt(r),f+=m.charAt(_>>>4&15)+m.charAt(15&_);return f}function X(d){for(var _=Array(d.length>>2),m=0;m<_.length;m++)_[m]=0;for(m=0;m<8*d.length;m+=8)_[m>>5]|=(255&d.charCodeAt(m/8))<<m%32;return _}function V(d){for(var _="",m=0;m<32*d.length;m+=8)_+=String.fromCharCode(d[m>>5]>>>m%32&255);return _}function Y(d,_){d[_>>5]|=128<<_%32,d[14+(_+64>>>9<<4)]=_;for(var m=1732584193,f=-271733879,r=-1732584194,i=271733878,n=0;n<d.length;n+=16){var h=m,t=f,g=r,e=i;f=md5_ii(f=md5_ii(f=md5_ii(f=md5_ii(f=md5_hh(f=md5_hh(f=md5_hh(f=md5_hh(f=md5_gg(f=md5_gg(f=md5_gg(f=md5_gg(f=md5_ff(f=md5_ff(f=md5_ff(f=md5_ff(f,r=md5_ff(r,i=md5_ff(i,m=md5_ff(m,f,r,i,d[n+0],7,-680876936),f,r,d[n+1],12,-389564586),m,f,d[n+2],17,606105819),i,m,d[n+3],22,-1044525330),r=md5_ff(r,i=md5_ff(i,m=md5_ff(m,f,r,i,d[n+4],7,-176418897),f,r,d[n+5],12,1200080426),m,f,d[n+6],17,-1473231341),i,m,d[n+7],22,-45705983),r=md5_ff(r,i=md5_ff(i,m=md5_ff(m,f,r,i,d[n+8],7,1770035416),f,r,d[n+9],12,-1958414417),m,f,d[n+10],17,-42063),i,m,d[n+11],22,-1990404162),r=md5_ff(r,i=md5_ff(i,m=md5_ff(m,f,r,i,d[n+12],7,1804603682),f,r,d[n+13],12,-40341101),m,f,d[n+14],17,-1502002290),i,m,d[n+15],22,1236535329),r=md5_gg(r,i=md5_gg(i,m=md5_gg(m,f,r,i,d[n+1],5,-165796510),f,r,d[n+6],9,-1069501632),m,f,d[n+11],14,643717713),i,m,d[n+0],20,-373897302),r=md5_gg(r,i=md5_gg(i,m=md5_gg(m,f,r,i,d[n+5],5,-701558691),f,r,d[n+10],9,38016083),m,f,d[n+15],14,-660478335),i,m,d[n+4],20,-405537848),r=md5_gg(r,i=md5_gg(i,m=md5_gg(m,f,r,i,d[n+9],5,568446438),f,r,d[n+14],9,-1019803690),m,f,d[n+3],14,-187363961),i,m,d[n+8],20,1163531501),r=md5_gg(r,i=md5_gg(i,m=md5_gg(m,f,r,i,d[n+13],5,-1444681467),f,r,d[n+2],9,-51403784),m,f,d[n+7],14,1735328473),i,m,d[n+12],20,-1926607734),r=md5_hh(r,i=md5_hh(i,m=md5_hh(m,f,r,i,d[n+5],4,-378558),f,r,d[n+8],11,-2022574463),m,f,d[n+11],16,1839030562),i,m,d[n+14],23,-35309556),r=md5_hh(r,i=md5_hh(i,m=md5_hh(m,f,r,i,d[n+1],4,-1530992060),f,r,d[n+4],11,1272893353),m,f,d[n+7],16,-155497632),i,m,d[n+10],23,-1094730640),r=md5_hh(r,i=md5_hh(i,m=md5_hh(m,f,r,i,d[n+13],4,681279174),f,r,d[n+0],11,-358537222),m,f,d[n+3],16,-722521979),i,m,d[n+6],23,76029189),r=md5_hh(r,i=md5_hh(i,m=md5_hh(m,f,r,i,d[n+9],4,-640364487),f,r,d[n+12],11,-421815835),m,f,d[n+15],16,530742520),i,m,d[n+2],23,-995338651),r=md5_ii(r,i=md5_ii(i,m=md5_ii(m,f,r,i,d[n+0],6,-198630844),f,r,d[n+7],10,1126891415),m,f,d[n+14],15,-1416354905),i,m,d[n+5],21,-57434055),r=md5_ii(r,i=md5_ii(i,m=md5_ii(m,f,r,i,d[n+12],6,1700485571),f,r,d[n+3],10,-1894986606),m,f,d[n+10],15,-1051523),i,m,d[n+1],21,-2054922799),r=md5_ii(r,i=md5_ii(i,m=md5_ii(m,f,r,i,d[n+8],6,1873313359),f,r,d[n+15],10,-30611744),m,f,d[n+6],15,-1560198380),i,m,d[n+13],21,1309151649),r=md5_ii(r,i=md5_ii(i,m=md5_ii(m,f,r,i,d[n+4],6,-145523070),f,r,d[n+11],10,-1120210379),m,f,d[n+2],15,718787259),i,m,d[n+9],21,-343485551),m=safe_add(m,h),f=safe_add(f,t),r=safe_add(r,g),i=safe_add(i,e)}return Array(m,f,r,i)}function md5_cmn(d,_,m,f,r,i){return safe_add(bit_rol(safe_add(safe_add(_,d),safe_add(f,i)),r),m)}function md5_ff(d,_,m,f,r,i,n){return md5_cmn(_&m|~_&f,d,_,r,i,n)}function md5_gg(d,_,m,f,r,i,n){return md5_cmn(_&f|m&~f,d,_,r,i,n)}function md5_hh(d,_,m,f,r,i,n){return md5_cmn(_^m^f,d,_,r,i,n)}function md5_ii(d,_,m,f,r,i,n){return md5_cmn(m^(_|~f),d,_,r,i,n)}function safe_add(d,_){var m=(65535&d)+(65535&_);return(d>>16)+(_>>16)+(m>>16)<<16|65535&m}function bit_rol(d,_){return d<<_|d>>>32-_}
 
 let domHelper = class domHelper{
     constructor()
@@ -180,13 +165,13 @@ let domHelper = class domHelper{
                         {
                             that[task.type]();
                         }
-                        else if(task.category === 'none' && task.whatToDo ==='call')
+                        else if(task.category === 'none' && task.whatToDo ==='call' &&  window[task.object] && typeof  window[task.object][task.type] =='function')
                         {
                             window[task.object][task.type]();
                         }
                     });
                 }
-                if(actTask.type === 'event')
+                else if(actTask.type === 'event')
                 {
 
                     that.eventResolver(actTask,callback);
@@ -321,7 +306,7 @@ let domHelper = class domHelper{
                             return false;
                         }
                         /*let bkpElem=document.createElement('div');
-                        bkpElem.id=CryptoJS.MD5(JSON.stringify(actTask.selector));
+                        bkpElem.id=MD5(JSON.stringify(actTask.selector));
                         bkpElem.style.visibility='hidden';
                         bkpElem.innerHTML=$(actElem).html();
                         $('body').append(bkpElem);*/
@@ -342,7 +327,7 @@ let domHelper = class domHelper{
                     }
                     else if(actTask.taskType=='unload')
                     {
-                        //let bkpElem=$("#"+CryptoJS.MD5(JSON.stringify(actTask.selector)));
+                        //let bkpElem=$("#"+MD5(JSON.stringify(actTask.selector)));
                         //document.getElementById("gridcontainer").innerHTML =  $(bkpElem).html();
                         //$(actElem).html($(bkpElem).html());
                         //$(actElem).load();
@@ -395,7 +380,7 @@ let domHelper = class domHelper{
                                         {
                                             let carsoulDiv=document.createElement('span');
                                             let carSoulHolder=that.jqSelector(actTask.carsoulDest.selector);
-                                            carsoulDiv.id=CryptoJS.MD5(activity.id);
+                                            carsoulDiv.id=MD5(activity.id);
                                             $(carsoulDiv).addClass('intro-carsoul');
                                             $(carsoulDiv).bind('click', function(){
                                                 let target=activity.id;
@@ -542,7 +527,7 @@ let domHelper = class domHelper{
                         if(jqEle.is(":visible"))
                         {
 
-                            let unqId = "OV-"+CryptoJS.MD5(jqEle.get(0).outerHTML);
+                            let unqId = "OV-"+MD5(jqEle.get(0).outerHTML);
 
                             let jqElePos = jqEle.css("position");
                             let jqEleTop = jqEle.css("top");
@@ -596,7 +581,7 @@ let domHelper = class domHelper{
                         for(let i=0;i<addPassers.length;i++)
                         {
                             let jqEle = $(addPassers[i]);
-                            let unqId = "OV-"+CryptoJS.MD5(jqEle.get(0).outerHTML);
+                            let unqId = "OV-"+MD5(jqEle.get(0).outerHTML);
                             let ele = $("#"+unqId);
                             switch(actEvent.eventType)
                             {
@@ -832,7 +817,7 @@ let domHelper = class domHelper{
                                 if(act.hasOwnProperty('interactiveMode') && act.interactiveMode)
                                 {
                                     $(".intro-carsoul.active").removeClass('active');
-                                    $("#"+CryptoJS.MD5(act.id)).addClass('active');
+                                    $("#"+MD5(act.id)).addClass('active');
                                 }
                             }
                         };
@@ -870,7 +855,7 @@ let domHelper = class domHelper{
     highlighterMissing()
     {
         var self = this;
-        $.confirm({
+        $("#product_trial_confirm")({
             title: 'Prerequisite not found. Unable to continue current task.',
             content: '',
             closeIcon: false,
@@ -916,7 +901,7 @@ let domHelper = class domHelper{
                 callback.onSuccess();
             }
             else if(stopCounter < 0)
-            {
+            { 
                 self.removeInterval(selfId);
                 callback.onTimeOut();
 
@@ -1079,7 +1064,9 @@ let domHelper = class domHelper{
         let id = "exitTrailOvrl";
         $('#startTrailOvrl').remove();
         $('#'+id).remove();
-        $('body').append('<a id="'+id+'" title="Exit Learning Mode" onClick = "pWalk.productTrailExitHandler()" class="btn-exit-trial" style="position: absolute; z-index: '+(hiderZindex+2)+';">Exit Learning Mode</a>');
+       // $('body').append('<a id="'+id+'" title="Exit Learning Mode" onClick = "pWalk.productTrailExitHandler()" class="btn-exit-trial" style="position: absolute; z-index: '+(hiderZindex+2)+';">Exit Learning Mode</a>');
+        $('body').append('<div id="'+id+'" onClick = "pWalk.productTrailExitHandler()" tabindex="0" style="z-index: 2147483647;width: 101px;height: 41px;right: 20px;bottom: 20px;border-radius: 20.5px;box-shadow: rgba(0, 0, 0, 0.09) 0px 1px 6px, rgba(0, 0, 0, 0.18) 0px 2px 30px;border: none;position: fixed;cursor: pointer;background: rgb(33, 150, 243);"><svg viewBox="0 0 60 60" fill="#ffffff" style="width: 30px; height: 30px; position: absolute; top: 5px; left: 8px;"><defs><filter id="hlp-icon-shadow" x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox"><feOffset dx="-2" dy="2" in="SourceAlpha" result="offset"></feOffset><feGaussianBlur stdDeviation="2" in="offset" result="blur"></feGaussianBlur><feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.2 0" in="blur" result="matrix"></feColorMatrix><feMerge><feMergeNode in="matrix"></feMergeNode><feMergeNode in="SourceGraphic"></feMergeNode></feMerge></filter></defs><path filter="url(#hlp-icon-shadow)" d="M37 19.7v14.6H15l7.5-7.3-7.5-7.3"></path><rect width="3.889" height="27.731" x="36.111" y="17" rx="1.944"></rect></svg><div class="" style="white-space: nowrap; display: inline-block; padding: 10px 24px 10px 8px; font-size: 18px; font-weight: 600; font-family: Helvetica, arial, sans-serif; color: rgb(255, 255, 255); position: absolute; top: 0px; left: 30px;">Help</div></div>');
+
     }
 
     drawStartTrialLink(noToolTipPlease)
@@ -1092,11 +1079,14 @@ let domHelper = class domHelper{
         let id = "startTrailOvrl";
         $('#exitTrailOvrl').remove();
         $('#'+id).remove();
-        $('body').append('<a id="'+id+'" title="Start Learning Mode" class="btn-start-trial" style="position: absolute; z-index: '+(hiderZindex+1)+';">Start Learning Mode</a>');
+        $('body').append('<div id="'+id+'" onClick = "pWalk.productTrailExitHandler()" tabindex="0" style="z-index: 2147483647;width: 101px;height: 41px;right: 20px;bottom: 20px;border-radius: 20.5px;box-shadow: rgba(0, 0, 0, 0.09) 0px 1px 6px, rgba(0, 0, 0, 0.18) 0px 2px 30px;border: none;position: fixed;cursor: pointer;background: rgb(33, 150, 243);"><svg viewBox="0 0 60 60" fill="#ffffff" style="width: 30px; height: 30px; position: absolute; top: 5px; left: 8px;"><defs><filter id="hlp-icon-shadow" x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox"><feOffset dx="-2" dy="2" in="SourceAlpha" result="offset"></feOffset><feGaussianBlur stdDeviation="2" in="offset" result="blur"></feGaussianBlur><feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.2 0" in="blur" result="matrix"></feColorMatrix><feMerge><feMergeNode in="matrix"></feMergeNode><feMergeNode in="SourceGraphic"></feMergeNode></feMerge></filter></defs><path filter="url(#hlp-icon-shadow)" d="M37 19.7v14.6H15l7.5-7.3-7.5-7.3"></path><rect width="3.889" height="27.731" x="36.111" y="17" rx="1.944"></rect></svg><div class="" style="white-space: nowrap; display: inline-block; padding: 10px 24px 10px 8px; font-size: 18px; font-weight: 600; font-family: Helvetica, arial, sans-serif; color: rgb(255, 255, 255); position: absolute; top: 0px; left: 30px;">Help</div></div>');
+
+       // $('body').append('<a id="'+id+'" title="Start Learning Mode" class="btn-start-trial" style="position: absolute; z-index: '+(hiderZindex+1)+';">Start Learning Mode</a>');
 //        $('#'+id).tooltip({
 //              disabled: true,
 //              close: function( event, ui ) { $(this).tooltip('disable'); }
 //             });
+
 
         var self = this;
         let observeSetTimeOut = {type:'drawStartTrialLink',id:null};
@@ -1311,9 +1301,9 @@ let domHelper = class domHelper{
     drawExitConfirm(cancelCallback,oksuccess)
     {
         var self = this;
-        $.confirm({
-            title: 'Are you sure you want to exit learning mode?',
-            content: '',
+        $("#product_trial_confirm").dialog({
+            title: '',
+            content: 'Are you sure you want to exit learning mode?',
             closeIcon: false,
             buttons: {
                 Yes: {
@@ -1491,18 +1481,18 @@ let domHelper = class domHelper{
         switch(elementObj.nodeName)
         {
             case "SELECT":
-                let retVal=CryptoJS.MD5($(elementObj).children("option:selected").val());
+                let retVal=MD5($(elementObj).children("option:selected").val());
                 return retVal;
                 break;
             case "INPUT":
                 if($(elementObj).attr('type')=='checkbox' || $(elementObj).attr('type')=='radio')
                 {
-                    return CryptoJS.MD5($(elementObj).prop('checked').toString()); // MD5 gives error when bool true
+                    return MD5($(elementObj).prop('checked').toString()); // MD5 gives error when bool true
                 }
-                return CryptoJS.MD5($(elementObj).val());
+                return MD5($(elementObj).val());
                 break;
             default:
-                return CryptoJS.MD5($(elementObj).val());
+                return MD5($(elementObj).val());
                 break;
         }
     }
@@ -1569,7 +1559,7 @@ let domHelper = class domHelper{
                 let highSel = $(selObj);
                 let highSelMon = $(monObj);
 
-                if(checkTicker && guiderTracker[CryptoJS.MD5(act.selector.self)] == 1)
+                if(checkTicker && guiderTracker[MD5(act.selector.self)] == 1)
                 {
                     continue;
                 }
@@ -1578,7 +1568,7 @@ let domHelper = class domHelper{
                     && this.findElementValue(monObj)
                     && monObj.getAttribute('oldValue') != this.findElementValue(monObj))
                 {
-                    guiderTracker[CryptoJS.MD5(act.selector.self)]=1;
+                    guiderTracker[MD5(act.selector.self)]=1;
                     guiderChecked++;
                     continue;
                 }
@@ -1590,7 +1580,7 @@ let domHelper = class domHelper{
 
                 if(act.hideTitle===true)
                 {
-                    guiderTracker[CryptoJS.MD5(act.selector.self)]=1;
+                    guiderTracker[MD5(act.selector.self)]=1;
                     continue;
                 }
                 if($(".drawGuiderMarkerDiv").length>0)
@@ -1684,7 +1674,7 @@ let domHelper = class domHelper{
 
 
                     $('body').append('<div parentSelector="'+act.selector.self+'" id="'+markerId+'" class="drawGuiderMarkerDiv hlx-tip-ping '+addClass+'" style="z-index: '+(useZindex)+'; left: '+left+'px; top: '+top+'px;"><div class="h-three"><div class="mouse"><div class="line"></div><div class="wheel"></div><div class="click"></div></div>'+divStr+' <a id="'+markerId+'Close" class="close" >x</a></div></div>');
-                    guiderTracker[CryptoJS.MD5(act.selector.self)]=1;
+                    guiderTracker[MD5(act.selector.self)]=1;
                     if(autoFocus)
                     {
                         $('html,body').animate({
@@ -1737,7 +1727,7 @@ let domHelper = class domHelper{
                             {
                                 guiderOpenFlag=false;
                             }
-                            guiderTracker[CryptoJS.MD5($('#'+markerId).attr('parentSelector'))]=1;
+                            guiderTracker[MD5($('#'+markerId).attr('parentSelector'))]=1;
 
                             let observeSetTimeOut = {type:'guiderMarkerCloseEvents-remove',id:null};
                             observeSetTimeOut.id = setTimeout(function(){$('#'+markerId).remove();},timeoutClose*1000);
@@ -1754,14 +1744,14 @@ let domHelper = class domHelper{
 
                         $('#'+markerId+'Close').click(function(){
                             guiderOpenFlag=false;
-                            guiderTracker[CryptoJS.MD5($('#'+markerId).attr('parentSelector'))]=1;
+                            guiderTracker[MD5($('#'+markerId).attr('parentSelector'))]=1;
                             $('#'+markerId).remove();
                             $('.'+markerId).remove();
                         });
 
                         $('#'+markerId+',.'+markerId).click(function(){
                             guiderOpenFlag=false;
-                            guiderTracker[CryptoJS.MD5($('#'+markerId).attr('parentSelector'))]=1;
+                            guiderTracker[MD5($('#'+markerId).attr('parentSelector'))]=1;
                             $('#'+markerId).remove();
                             $('.'+markerId).remove();
                         });
@@ -1788,6 +1778,7 @@ let domHelper = class domHelper{
     }
 
     dialogPopup(content,callback) {
+        console.log('dialogPopup');
         let that = this;
         let closeIcon=true;
         if(this.productWalk.activeMilestone && (content.html.template=='welcome' || content.html.template=='afterCompleteMilestone'))
@@ -1799,19 +1790,16 @@ let domHelper = class domHelper{
                     || !this.productWalk.user.completedMilestones.FDCHAPT1.hasOwnProperty(this.productWalk.activeMilestone.id))
                 && (!this.productWalk.user.hasOwnProperty('failedTrace')
                     || !this.productWalk.user.failedTrace.hasOwnProperty('FDCHAPT1')
-                    || !this.productWalk.user.failedTrace.FDCHAPT1.hasOwnProperty(this.productWalk.activeMilestone.id))
+                    || !this.productWalk.user.failclickedTrace.FDCHAPT1.hasOwnProperty(this.productWalk.activeMilestone.id))
             )
             {
                 closeIcon=false;
             }
         }
         
-        if(this.certification && openedDialog && openedDialog.$jconfirmBox)
-        {
-            openedDialog.close();
-        } 
+        product_trial_dialog.close(); 
         
-        let d = openedDialog = $.dialog({
+         product_trial_dialog.open({
             title: '',
             closeIcon: closeIcon,
             content: this.importTemplate(content),
@@ -1852,7 +1840,7 @@ let domHelper = class domHelper{
                 }
                 that.dialogCloseEventBind(callback.onExit);
                 this.$content.find('#next, #nextMsg').click(function(){
-                    d.close();
+                    product_trial_dialog.close();
                     if(callback.onSuccess)
                     {
                         callback.onSuccess();
@@ -1864,7 +1852,7 @@ let domHelper = class domHelper{
 
                 });
                 this.$content.find('#doitnow').click(function(){
-                    d.close();
+                    product_trial_dialog.close();
                     if(Object.keys(that.productWalk).length)
                     {
                         that.productWalk.doItNow = true;
@@ -1880,7 +1868,7 @@ let domHelper = class domHelper{
 
                 });
                 this.$content.find('.nextMilestone').click(function(){
-                    d.close();
+                    product_trial_dialog.close();
                     if(callback.onSuccess)
                     {
                         callback.onSuccess();
@@ -1892,7 +1880,7 @@ let domHelper = class domHelper{
 
                 });
                 this.$content.find('#nextVideo').click(function(){
-                    d.close();
+                    product_trial_dialog.close();
                     if(callback.nextVideo)
                     {
                         callback.nextVideo();
@@ -1900,36 +1888,36 @@ let domHelper = class domHelper{
 
                 });
                 this.$content.find('#skip').click(function(){
-                    d.close();
+                    product_trial_dialog.close();
                     if(callback.onSkip)
                     {
                         callback.onSkip();
                     }
                 });
                 this.$content.find('#viewAll').click(function(){
-                    d.close();
+                    product_trial_dialog.close();
                     if(callback.viewAll)
                     {
                         callback.viewAll();
                     }
                 });
                 this.$content.find('#exit').click(function(){
-                    d.close();
+                    product_trial_dialog.close();
                     if(callback.onExit)
                     {
                         callback.onExit();
                     }
                 });
                 this.$content.find('#watch,#watchAgain').click(function(){
-                    d.close();
+                    product_trial_dialog.close();
                     that.watchVideo(that.productWalk.activeMilestone,callback.watchAgain);
                 });
                 this.$content.find('#watchOther').click(function(){
-                    d.close();
+                    product_trial_dialog.close();
                     that.watchOtherVideo(callback);
                 });
                 this.$content.find('#watchOtherBegin').click(function(){
-                    d.close();
+                    product_trial_dialog.close();
                     that.watchOtherVideo(callback,false);
                 });
                 this.$content.find('.redeem-now').click(function(){
@@ -1951,7 +1939,7 @@ let domHelper = class domHelper{
     loadPlan()
     {
         this.productWalk.productWalkServer.loadplans(function(content){
-            var b = openedDialog = $.dialog({
+            openedDialog = product_trial_dialog.open({
                 bootstrapClasses: {
                     container: 'upgrade-plan-list'
                 },
@@ -2065,7 +2053,7 @@ let domHelper = class domHelper{
             '<div class="float-right your-balance"><span class="text-lead">Your Balance: <span class="text-green">$' + balance + '</span></span></div></div>';
 
 
-        var b = openedDialog = $.dialog({
+        openedDialog = product_trial_dialog.open({
             bootstrapClasses: {
                 container: 'youtube-panel-list'
             },
@@ -2155,12 +2143,12 @@ let domHelper = class domHelper{
     viewAllCertificateTask()
     {
         let content  = this.certification.getAllTaskView();
-        if(openedDialog && openedDialog.$jconfirmBox)
+        if(openedDialog)
         {
-            openedDialog.close();
+            product_trial_dialog.close();
         }
         let that = this;
-        var b = openedDialog = $.dialog({
+        openedDialog = product_trial_dialog.open({
             bootstrapClasses: {
                 container: 'youtube-panel-list'
             },
@@ -2224,7 +2212,7 @@ let domHelper = class domHelper{
         var b;
         if(videoType=='stream')
         {
-            b = $.dialog({
+            openedDialog= product_trial_dialog.open({
                 bootstrapClasses: {
                     container: 'video-panel'
                 },
@@ -2252,7 +2240,7 @@ let domHelper = class domHelper{
             });
         }
         else {
-            b = $.dialog({
+            openedDialog= product_trial_dialog.open({
                 bootstrapClasses: {
                     container: 'youtube-panel'
                 },
@@ -2438,6 +2426,7 @@ let domHelper = class domHelper{
     }
     welcomeProductTrial(callback,overviewCallback)
     {
+        
         let activeMilestone = this.productWalk.user.activeMilestone;
         console.log("welcomeProductTrial"+JSON.stringify(activeMilestone));
         var that = this;
@@ -2459,7 +2448,7 @@ let domHelper = class domHelper{
                     '<button id="take_a_overview" type="button" class="btn btn-block btn-yellow">TAKE A QUICK OVERVIEW</button>';
         }*/
         content = '' +
-            '<h3 class="text-uppercase">WELCOME TO <span class="hotelogix">HOTELOGIX</span></h3>'+
+            '<h3 class="text-uppercase">22WELCOME TO <span class="hotelogix">HOTELOGIX</span></h3>'+
             //'<h5 class="text-uppercase" style="color:#faff0b">You are in Learning Mode</h5>'+
             //'<div style="position:relative"><div class="christmas-offer"><div class="snow-left">&#10052;</div><div class="snow-right">&#10052;</div><h5><strong>Congratulations.</strong> You\'ve won!</h5><h4><strong>$25 </strong>FOR SIGNING UP</h4><button id="click_to_continue" type="button" class="btn btn-yellow">Explore with A.C.E.</button></div>'+
             '<button id="click_to_continue" type="button" class="btn btn-yellow">Explore with A.C.E.</button>'+
@@ -2471,25 +2460,26 @@ let domHelper = class domHelper{
             '</div>';
             
 
-        var b = openedDialog = $.dialog({
+        openedDialog = product_trial_dialog.open({
             bootstrapClasses: {
             },
             title: '',
             content: content,
             closeIcon: closeIcon,
             onOpen: function(){
-                var self = this;
-                console.log(this);
+                var self = this; 
+                console.log(this.$content.find('#click_to_continue'));
                 this.$content.find('#click_to_continue').click(function(){
+                    product_trial_dialog.close();
                     callback();
-                    self.close();
+                    
                 });
                 /*this.$content.find('#take_a_overview').click(function(){
                     overviewCallback();
-                    self.close();
+                    $( this ).dialog( "close" );
                 });*/
                 this.$content.find('#exit_welcome').click(function(){
-                    self.close();
+                    product_trial_dialog.close();
                     that.drawStartTrialLink();
                 });
                 $('#wcGuId').show();
@@ -2524,7 +2514,7 @@ let domHelper = class domHelper{
             '<button id="exit_welcome" type="button" class="btn btn-block btn-yellow">Not Now</button>' +
             '</div>';
 
-        var b = openedDialog = $.dialog({
+        openedDialog = product_trial_dialog.open({
             bootstrapClasses: {
             },
             title: '',
@@ -2533,13 +2523,13 @@ let domHelper = class domHelper{
             onOpen: function(){
                 var self = this;
                 
-                $($(this).get()[0]).find('#click_to_continue').click(function(){
-                    console.log("click_to_continue");
+                this.$content.find('#click_to_continue').click(function(){
+                   
                     callback();
-                    self.close();
+                    product_trial_dialog.close();
                 });
                 $(this).find('#exit_welcome').click(function(){
-                    self.close();
+                    product_trial_dialog.close();
                     that.drawStartCertificateLink();
                 });
             }
@@ -2565,7 +2555,7 @@ let domHelper = class domHelper{
             '<h3>Your Learning Mode is Over</h3>' +
             '<h4>Now Have Fun with our Beauty</h4>';
 
-        var b = openedDialog = $.dialog({
+        openedDialog = product_trial_dialog.open({
             bootstrapClasses: {
             },
             title: '',
@@ -2692,7 +2682,7 @@ let domHelper = class domHelper{
         let content = '' +
             '<h3>Please Try Again</h3>';
 
-        var b = openedDialog = $.dialog({
+        openedDialog = product_trial_dialog.open({
             bootstrapClasses: {
             },
             closeIcon: false,
@@ -2755,7 +2745,7 @@ let domHelper = class domHelper{
             '<div class="float-right"><a id="redeem-now-footer" href="#" class="redeem-now">Redeem now</a></div>' +
             '<div class="float-right your-balance"><span class="text-lead">Your Balance: <span class="text-green">$' + balance + '</span></span></div></div>';
 
-        var b = openedDialog = $.dialog({
+        openedDialog = product_trial_dialog.open({
             bootstrapClasses: {
             },
             title: '',
@@ -2821,7 +2811,7 @@ let domHelper = class domHelper{
         console.log(irfUrl);
         //@var irfSubUrl defined in view/reservation/frontdesk.phtml
         console.log(w,h);
-        irfDataCollectorDialog = $.dialog({
+        irfDataCollectorDialog = product_trial_dialog.open({
             bootstrapClasses: {
                 container: 'irf-panel'
             },

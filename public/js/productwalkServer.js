@@ -103,6 +103,7 @@ let productWalkServer = class productWalkServer{
 
     post(url,requestType,data,callback,modifiedCallback, sendLog){
         callback({});
+        return;
         if(apiCallQueue[requestType])
         {
             console.log('Not calling twice same api:'+requestType);
@@ -183,6 +184,19 @@ let productWalkServer = class productWalkServer{
     }
     sendMailIrfSub(callback,param)
     {
+        // check is param callback a js function
+        
+        if(callback && typeof callback.onSuccess == 'function')
+            {
+                callback.onSuccess(); return;
+                
+            }
+        if(typeof callback == 'function')
+            {
+                callback(); return;
+                
+            }
+            return;
         let url = BASE_URL+'/irf-sub';
         let data = {};
         data["param"] = param; // hotelId

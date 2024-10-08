@@ -1089,6 +1089,7 @@ let productWalk = class productWalk{
 
     switchToNextIf(productWalk,milestone,act,successCallback,failCallback,isSkip){
         console.log(" :: switchToNextIf ::");
+        console.log(act);
         var self = this;
         if(isSkip === undefined)
         {
@@ -1640,7 +1641,7 @@ $(document).ready(function () {
                     window.pWalk = pWalk;
                     window.onresize = pWalk.reportWindowSizeHandler;
 
-                }, 2000);
+                });
 
                 setTimeOutCache.push(observeSetTimeOut);
             });

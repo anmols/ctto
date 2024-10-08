@@ -623,13 +623,13 @@
 					"type": "event",
 					"highlighter": {
 						"selector": {
-							"self": "#bookingOwner"
+							"self": "#firstName"
 						}
 					},
 					"guideMarkers": [
 						{
 							"selector": {
-								"self": "[groupstatus=''].prv.checkedInRoom"
+								"self": "#firstName"
 							},
 							"title": [
 								"Right Click this reservation"
@@ -643,13 +643,6 @@
 							"eventType": "click",
 							"selector": {
 								"self": "#leftOvrl,#topOvrl,#rgtOvrl,#botOvrl,.tdc"
-							}
-						},
-						{
-							"type": "event",
-							"eventType": "contextmenu",
-							"selector": {
-								"self": ".reservationRoom,.checkedOutRoom,#bookingOwner,.tdc:not([groupstatus=''])"
 							}
 						}
 					],
