@@ -599,7 +599,7 @@
 			"activityList": {
 				"CHECKOUTRSV1000": {
 					"id": "CHECKOUTRSV1000",
-					"type": "event",
+					"type": "MSG_PROMPT",
 					"highlighter": {},
 					"html": {
 						"X-Y_Selector": {

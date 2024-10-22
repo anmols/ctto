@@ -171,7 +171,7 @@ let domHelper = class domHelper{
                         }
                     });
                 }
-                else if(actTask.type === 'event')
+                if(actTask.type === 'event')
                 {
 
                     that.eventResolver(actTask,callback);
@@ -1083,7 +1083,7 @@ let domHelper = class domHelper{
 
        // $('body').append('<a id="'+id+'" title="Start Learning Mode" class="btn-start-trial" style="position: absolute; z-index: '+(hiderZindex+1)+';">Start Learning Mode</a>');
 //        $('#'+id).tooltip({
-//              disabled: true,
+//              disabled: true,  
 //              close: function( event, ui ) { $(this).tooltip('disable'); }
 //             });
 
@@ -1099,6 +1099,7 @@ let domHelper = class domHelper{
         setTimeOutCache.push(observeSetTimeOut);
 
         let txt = 'Click here any time to resume with<br>A.C.E. <em style="font-size: .8em;"> (Automated Coaching Engine)</em>';
+        noToolTipPlease = true;
         if(!noToolTipPlease)
         {
             this.drawExitStartToolTip(txt);
